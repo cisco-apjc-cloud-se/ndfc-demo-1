@@ -31,7 +31,7 @@ vrfs = {
     description = "VRF-1 Created by Terraform Plan"
     vni_id = 33001
     vlan_id = 3001
-    deploy = false
+    deploy = true
     attached_switches = [
       "S1-BGW1",
       "S1-BGW2",
