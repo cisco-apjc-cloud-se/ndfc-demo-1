@@ -129,7 +129,7 @@ resource "dcnm_network" "networks" {
   # secondary_gw_1  = "192.0.3.1/24"
   # secondary_gw_2  = "192.0.3.1/24"
   # arp_supp_flag   = true
-  # ir_enable_flag  = false
+  ir_enable_flag  = true #???
   # mcast_group     = "239.1.2.2"
   # dhcp_1          = "1.2.3.4"
   # dhcp_2          = "1.2.3.5"
