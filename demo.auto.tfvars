@@ -80,29 +80,41 @@ vpc_interfaces = {
 
 ### NETWORKS ###
 networks = {
-  # TFCB-NET-1 = {
-  #   name = "TFCB-NET-1"
-  #   description = "Terraform Intersight Demo Network #1"
-  #   vrf_name = "TFCB-VRF-1"
-  #   ip_subnet = "192.168.101.1/24"
-  #   vni_id = 33101
-  #   vlan_id = 3101
-  #   deploy = true
-  #   attached_switches = {
-  #     DC3-LEAF-1 = {
-  #       name = "DC3-LEAF-1"
-  #       switch_ports = [
-  #         "Port-channel10"
-  #       ]
-  #     }
-  #     DC3-LEAF-2 = {
-  #       name = "DC3-LEAF-2"
-  #       switch_ports = [
-  #         "Port-channel10"
-  #       ]
-  #     }
-  #   }
-  # }
+  TFCB-NET-1 = {
+    name = "TFCB-NET-1"
+    description = "Terraform Intersight Demo Network #1"
+    vrf_name = "TFCB-VRF-1"
+    ip_subnet = "192.168.101.1/24"
+    vni_id = 33101
+    vlan_id = 3101
+    deploy = true
+    attached_switches = {
+      S1-BGW1 = {
+        name = "S1-BGW1"
+        switch_ports = [
+          # "Port-channel10"
+        ]
+      }
+      S1-BGW2 = {
+        name = "S1-BGW2"
+        switch_ports = [
+          # "Port-channel10"
+        ]
+      }
+      S2-BGW1 = {
+        name = "S2-BGW1"
+        switch_ports = [
+          # "Port-channel10"
+        ]
+      }
+      S2-BGW2 = {
+        name = "S2-BGW2"
+        switch_ports = [
+          # "Port-channel10"
+        ]
+      }
+    }
+  }
   # TFCB-NET-2 = {
   #   name = "TFCB-NET-2"
   #   description = "Terraform Intersight Demo Network #2"
