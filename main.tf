@@ -3,7 +3,7 @@ terraform {
     hostname = "app.terraform.io"
     organization = "mel-ciscolabs-com"
     workspaces {
-      name = "ist-dcnm-workspace"
+      name = "ndfc-demo-1"
     }
   }
   required_providers {
@@ -21,6 +21,7 @@ provider "dcnm" {
   password = var.dcnm_password
   url      = var.dcnm_url
   insecure = true
+  platform = "nd"
 }
 
 ## Read Switch Inventory ##
@@ -40,6 +41,10 @@ locals {
       for switch in data.dcnm_inventory.switches :
           switch.switch_name => switch.serial_number
   }
+}
+
+output "serial_numbers" {
+  value = local.serial_numbers
 }
 
 ## Build New VRFs ###
@@ -135,7 +140,7 @@ resource "dcnm_network" "networks" {
   # rt_both_flag    = true
   # trm_enable_flag = true
   l3_gateway_flag = true
-  template        = "MODIFIED_Network_Universal"
+  # template        = "MODIFIED_Network_Universal"
   deploy          = each.value.deploy
 
   dynamic "attachments" {
