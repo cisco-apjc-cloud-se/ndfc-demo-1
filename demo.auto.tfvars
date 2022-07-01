@@ -2,7 +2,7 @@
 platform = "nd"
 
 ### Target Fabric - no supports MSD/Multi-Site Fabrics ###
-dcnm_fabric = "DC3"
+dcnm_fabric = "MSD_Fabric_DCI"
 
 ### FABRIC INVENTORY ###
 switches = {
