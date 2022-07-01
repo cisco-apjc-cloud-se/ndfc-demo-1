@@ -138,7 +138,7 @@ networks = {
     ip_subnet = "192.168.102.1/24"
     vni_id = 33102
     vlan_id = 3102
-    deploy = true
+    deploy = false
     attached_switches = {}
   }
   # TFCB-NET-3 = {
