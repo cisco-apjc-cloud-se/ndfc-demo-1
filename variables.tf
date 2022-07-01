@@ -17,7 +17,10 @@ variable "dcnm_fabric" {
 }
 
 variable "switches" {
-  type = list(string)
+  type = map(object({
+    name = string
+    fabric = string
+    }))
 }
 
 variable "vrfs" {

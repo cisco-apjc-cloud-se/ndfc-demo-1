@@ -1,11 +1,28 @@
 dcnm_fabric = "Richmond"
 
 ### FABRIC INVENTORY ###
-switches = [
-  "S1-BGW1",
-  "S1-BGW2",
-  "SPINE"
-]
+switches = {
+  s2-bgw1 = {
+    name    = "S2-BGW1"
+    fabric  = "Geelong"
+  }
+  s2-bgw2 = {
+    name    = "S2-BGW2"
+    fabric  = "Geelong"
+  }
+  s1-bgw1 = {
+    name    = "S1-BGW1"
+    fabric  = "Richmond"
+  }
+  s1-bgw2 = {
+    name    = "S1-BGW2"
+    fabric  = "Richmond"
+  }
+  spine = {
+    name    = "SPINE"
+    fabric  = "Richmond"
+  }
+}
 
 ### VRFS ###
 vrfs = {
