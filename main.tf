@@ -21,7 +21,7 @@ provider "dcnm" {
   password = var.dcnm_password
   url      = var.dcnm_url
   insecure = true
-  platform = "nd"
+  platform = var.platform
 }
 
 ## Read Switch Inventory ##

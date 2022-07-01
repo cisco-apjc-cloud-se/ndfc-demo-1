@@ -1,4 +1,8 @@
-dcnm_fabric = "MSD_Fabric_DCI"
+### Platform Type  - DCNM or ND ###
+platform = "nd"
+
+### Target Fabric - no supports MSD/Multi-Site Fabrics ###
+dcnm_fabric = "DC3"
 
 ### FABRIC INVENTORY ###
 switches = {

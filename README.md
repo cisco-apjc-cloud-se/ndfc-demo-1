@@ -49,7 +49,7 @@ In this example, both VLAN IDs and VXLAN IDs have been explicity set.  These are
 Typically the parallelism would be set in the Terraform cloud workspace environment variables section using the variable name "TFE_PARALLELISM" and value of "1", however this variable is NOT used by Terraform Cloud Agents.  Instead the variables "TF_CLI_ARGS_plan" and "TF_CLI_ARGS_apply" must be used with a value of "-parallelism=1"
 
 
-*October 2021* Due to an issue with the Terraform Provider (version 1.0.0) and DCNM API (11.5(3)) the "dcnm_network" resource will not deploy Layer 3 SVIs.  This is due to a defaul parameter not being correctly set in the API call.  Instead, the Network will be deployed as if the template has the "Layer 2 Only" checkbox set.
+*October 2021* Due to an issue with the Terraform Provider (version 1.0.0) and DCNM API (11.5(3)) the "dcnm_network" resource will not deploy Layer 3 SVIs.   This does NOT apply to NDFC 12.x deployments. This is due to a defaul parameter not being correctly set in the API call.  Instead, the Network will be deployed as if the template has the "Layer 2 Only" checkbox set.
 
 There are two workarouds for this
 1. After deploying the network(s), edit the network from the DCNM GUI then immediately save.  This will set the correct default parameters and these networks can be re-deployed.
@@ -79,12 +79,24 @@ There are two workarouds for this
 dcnm_fabric = "DC3"
 
 ### FABRIC INVENTORY ###
-switches = [
-  "DC3-LEAF-1",
-  "DC3-LEAF-2",
-  "DC3-BORDER-1",
-  "DC3-BORDER-2"
-]
+switches = {
+  dc3-leaf-1 = {
+    name    = "DC3-LEAF-1"
+    fabric  = "DC3"
+  }
+  dc3-leaf-2 = {
+    name    = "DC3-LEAF-2"
+    fabric  = "DC3"
+  }
+  dc3-border-1 = {
+    name    = "DC3-BORDER-1"
+    fabric  = "DC3"
+  }
+  dc3-border-2 = {
+    name    = "DC3-BORDER-2"
+    fabric  = "DC3"
+  }
+}
 
 ### VRFS ###
 vrfs = {
