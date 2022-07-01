@@ -131,16 +131,16 @@ networks = {
       }
     }
   }
-  TFCB-NET-2 = {
-    name = "TFCB-NET-2"
-    description = "Terraform Intersight Demo Network #2"
-    vrf_name = "TFCB-VRF-1"
-    ip_subnet = "192.168.102.1/24"
-    vni_id = 33102
-    vlan_id = 3102
-    deploy = false
-    attached_switches = {}
-  }
+  # TFCB-NET-2 = {
+  #   name = "TFCB-NET-2"
+  #   description = "Terraform Intersight Demo Network #2"
+  #   vrf_name = "TFCB-VRF-1"
+  #   ip_subnet = "192.168.102.1/24"
+  #   vni_id = 33102
+  #   vlan_id = 3102
+  #   deploy = false
+  #   attached_switches = {}
+  # }
   # TFCB-NET-3 = {
   #   name = "TFCB-NET-3"
   #   description = "Terraform Intersight Demo Network #3"
