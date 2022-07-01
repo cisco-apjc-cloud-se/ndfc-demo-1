@@ -42,20 +42,20 @@ vrfs = {
       "S2-BGW1",
       "S2-BGW2"
     ]
+  },
+  TFCB-VRF-2 = {
+    name = "TFCB-VRF-2"
+    description = "VRF Created by Terraform Plan #2"
+    vni_id = 33002
+    vlan_id = 3002
+    deploy = true
+    attached_switches = [
+      "S1-BGW1",
+      "S1-BGW2",
+      "S2-BGW1",
+      "S2-BGW2"
+    ]
   }
-  # TFCB-VRF-2 = {
-  #   name = "TFCB-VRF-2"
-  #   description = "VRF Created by Terraform Plan #2"
-  #   vni_id = 33002
-  #   vlan_id = 3002
-  #   deploy = true
-  #   attached_switches = [
-  #     "DC3-LEAF-1",
-  #     "DC3-LEAF-2",
-  #     "DC3-BORDER-1",
-  #     "DC3-BORDER-2"
-  #   ]
-  # },
   # TFCB-VRF-3 = {
   #   name = "TFCB-VRF-3"
   #   description = "VRF Created by Terraform Plan #3"
@@ -131,29 +131,16 @@ networks = {
       }
     }
   }
-  # TFCB-NET-2 = {
-  #   name = "TFCB-NET-2"
-  #   description = "Terraform Intersight Demo Network #2"
-  #   vrf_name = "TFCB-VRF-1"
-  #   ip_subnet = "192.168.102.1/24"
-  #   vni_id = 33102
-  #   vlan_id = 3102
-  #   deploy = true
-  #   attached_switches = {
-  #     DC3-LEAF-1 = {
-  #       name = "DC3-LEAF-1"
-  #       switch_ports = [
-  #         "Port-channel10"
-  #       ]
-  #     }
-  #     DC3-LEAF-2 = {
-  #       name = "DC3-LEAF-2"
-  #       switch_ports = [
-  #         "Port-channel10"
-  #       ]
-  #     }
-  #   }
-  # }
+  TFCB-NET-2 = {
+    name = "TFCB-NET-2"
+    description = "Terraform Intersight Demo Network #2"
+    vrf_name = "TFCB-VRF-1"
+    ip_subnet = "192.168.102.1/24"
+    vni_id = 33102
+    vlan_id = 3102
+    deploy = true
+    attached_switches = {}
+  }
   # TFCB-NET-3 = {
   #   name = "TFCB-NET-3"
   #   description = "Terraform Intersight Demo Network #3"
