@@ -90,7 +90,7 @@ resource "dcnm_vrf" "vrfs" {
 resource "dcnm_interface" "vpc" {
   for_each = var.vpc_interfaces
 
-  policy                  = "int_vpc_trunk_host_11_1"
+  policy                  = "int_vpc_trunk_host"
   type                    = "vpc"
   name                    = each.value.name
   fabric_name             = var.dcnm_fabric
