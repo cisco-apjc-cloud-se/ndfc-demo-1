@@ -74,6 +74,10 @@ There are two workarouds for this
 
 ## Example Input Variables ###
 ```hcl
+### Platform Type  - DCNM or ND ###
+platform = "nd"
+
+### Target Fabric - no supports MSD/Multi-Site Fabrics ###
 dcnm_fabric = "DC3"
 
 ### FABRIC INVENTORY ###
