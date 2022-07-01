@@ -72,7 +72,7 @@ vpc_interfaces = {
       ports = ["Eth1/10"]
       }
     switch2 = {
-      name = "S1-BGW12"
+      name = "S1-BGW2"
       ports = ["Eth1/10"]
       }
   }
@@ -84,7 +84,7 @@ vpc_interfaces = {
       ports = ["Eth1/10"]
       }
     switch2 = {
-      name = "S2-BGW12"
+      name = "S2-BGW2"
       ports = ["Eth1/10"]
       }
   }
