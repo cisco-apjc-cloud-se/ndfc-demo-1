@@ -1,28 +1,26 @@
-dcnm_fabric = "MSD_Fabric_DCI"
+dcnm_fabric = "Richmond"
 
 ### FABRIC INVENTORY ###
 switches = [
   "S1-BGW1",
   "S1-BGW2",
-  "S2-BGW1",
-  "S2-BGW2",
   "SPINE"
 ]
 
 ### VRFS ###
 vrfs = {
-  TFCB-VRF-1 = {
-    name = "TFCB-VRF-1"
-    description = "VRF Created by Terraform Plan #1"
-    vni_id = 33001
-    vlan_id = 3001
-    deploy = false
-    attached_switches = [
-      "S1-BGW1",
-      "S1-BGW2",
-      "S2-BGW1",
-      "S2-BGW2"
-    ]
+  # TFCB-VRF-1 = {
+  #   name = "TFCB-VRF-1"
+  #   description = "VRF Created by Terraform Plan #1"
+  #   vni_id = 33001
+  #   vlan_id = 3001
+  #   deploy = false
+  #   attached_switches = [
+  #     "S1-BGW1",
+  #     "S1-BGW2",
+  #     "S2-BGW1",
+  #     "S2-BGW2"
+  #   ]
   }
   # TFCB-VRF-2 = {
   #   name = "TFCB-VRF-2"
