@@ -21,7 +21,7 @@ vrfs = {
   #     "S2-BGW1",
   #     "S2-BGW2"
   #   ]
-  }
+  # },
   # TFCB-VRF-2 = {
   #   name = "TFCB-VRF-2"
   #   description = "VRF Created by Terraform Plan #2"
