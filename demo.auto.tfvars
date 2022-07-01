@@ -104,25 +104,25 @@ networks = {
       S1-BGW1 = {
         name = "S1-BGW1"
         switch_ports = [
-          # "Port-channel10"
+          "Port-channel10"
         ]
       }
       S1-BGW2 = {
         name = "S1-BGW2"
         switch_ports = [
-          # "Port-channel10"
+          "Port-channel10"
         ]
       }
       S2-BGW1 = {
         name = "S2-BGW1"
         switch_ports = [
-          # "Port-channel10"
+          "Port-channel10"
         ]
       }
       S2-BGW2 = {
         name = "S2-BGW2"
         switch_ports = [
-          # "Port-channel10"
+          "Port-channel10"
         ]
       }
     }
